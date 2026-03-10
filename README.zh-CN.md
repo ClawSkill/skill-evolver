@@ -57,16 +57,24 @@ Checkpoint: Materialization Decision
 - **Skill 融合**：把多个部分匹配的 skill 深度整合成新的能力。
 - **工作流沉淀**：在流程被证明有复用价值后，再转成新的 skill。
 
-## Installation
+## 安装
 
-把 `skill-evolver/` 目录复制到你的 skills 目录：
-
+**推荐方式 (via skills.sh):**
 ```bash
+npx skills add ClawSkill/skill-evolver -g -y
+```
+
+**手动安装:**
+```bash
+# 克隆仓库
+git clone https://github.com/ClawSkill/skill-evolver.git
+
+# 复制到 skills 目录
 # macOS / Linux
-cp -r skill-evolver/ ~/.claude/skills/
+cp -r skill-evolver/* ~/.claude/skills/skill-evolver/
 
 # Windows (PowerShell)
-Copy-Item -Recurse skill-evolver/ $env:USERPROFILE\.claude\skills\
+Copy-Item -Recurse skill-evolver/* $env:USERPROFILE\.claude\skills\skill-evolver\
 ```
 
 ### 可选前置依赖

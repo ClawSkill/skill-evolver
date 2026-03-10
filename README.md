@@ -59,14 +59,22 @@ Checkpoint: Materialization Decision
 
 ## Installation
 
-Copy the `skill-evolver/` folder into your skills directory:
-
+**Recommended (via skills.sh):**
 ```bash
+npx skills add ClawSkill/skill-evolver -g -y
+```
+
+**Manual:**
+```bash
+# Clone the repo
+git clone https://github.com/ClawSkill/skill-evolver.git
+
+# Copy to your skills directory
 # macOS / Linux
-cp -r skill-evolver/ ~/.claude/skills/
+cp -r skill-evolver/* ~/.claude/skills/skill-evolver/
 
 # Windows (PowerShell)
-Copy-Item -Recurse skill-evolver/ $env:USERPROFILE\.claude\skills\
+Copy-Item -Recurse skill-evolver/* $env:USERPROFILE\.claude\skills\skill-evolver\
 ```
 
 ### Optional prerequisites
@@ -89,8 +97,9 @@ npm i -g clawhub
 ## Repository Structure
 
 ```text
-skill-evolver/
+.
 |-- SKILL.md
+|-- README.md
 |-- scripts/
 |   |-- search_skills.py
 |   |-- audit_skill.py
